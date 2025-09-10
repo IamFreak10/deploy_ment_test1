@@ -3,19 +3,21 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "i.ibb.co.com", // allow this domain
-      },{
-        protocol: "https",
-        hostname: "i.postimg.cc",
-      },{
-        protocol: "https",
-        hostname: "res.cloudinary.com", // ✅ Cloudinary
+        protocol: 'https',
+        hostname: 'i.ibb.co.com', // allow this domain
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.postimg.cc',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com', // ✅ Cloudinary
       },
     ],
   },
   experimental: {
-    turbo: false, 
+    turbo: { enabled: false }, 
   },
 };
 
