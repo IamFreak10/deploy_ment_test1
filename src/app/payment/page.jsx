@@ -15,7 +15,7 @@ export default function PaymentPage() {
     if (!data) return;
 
     const paymentData = JSON.parse(data);
-    console.log("Payment data:",paymentData);
+  
     setPaymentData(paymentData);
 
     // const initPayment = async () => {
@@ -46,7 +46,7 @@ export default function PaymentPage() {
     setLoading(true);
     try {
       const amountWithoutComa = paymentData.amount.replace(",", "");
-      console.log(amountWithoutComa);
+      
       const res = await axios.post("api/payment", {
         amount: Number(amountWithoutComa),
         cus_name: paymentData.cus_name,

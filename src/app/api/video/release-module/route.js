@@ -67,12 +67,7 @@ export async function PATCH(req) {
   try {
     const { courseTitle, moduleName, videos, category } = await req.json();
 
-    console.log('Received data:', {
-      courseTitle,
-      moduleName,
-      videos,
-      category,
-    });
+    
 
     // Validate input
     if (!courseTitle || !moduleName || !Array.isArray(videos)) {

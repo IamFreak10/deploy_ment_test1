@@ -14,7 +14,7 @@ export const loginUser = async (payload) => {
   // compare password
   const isPassOk = await bcrypt.compare(password, user.password);
   if (!isPassOk) return null;
-  console.log("user is", user);
+  
 
   return {
     id: user._id.toString(),

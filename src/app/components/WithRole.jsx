@@ -10,8 +10,7 @@ const WithRole = (WrappedComponent, allowedRoles = []) => {
     const router = useRouter();
 
     useEffect(() => {
-      console.log('🔑 Session Data:', session); // এখানে session object console এ আসবে
-      console.log('📌 Status:', status); // loading, authenticated, unauthenticated
+     
       if (status === 'loading') return;
 
       if (!session) {

@@ -24,7 +24,6 @@ export async function GET(request) {
       .find({ email: cleanEmail, status: "issued" })
       .toArray();
 
-    console.log("Certificates found for", cleanEmail, ":", myCertificates.length);
 
     return new Response(
       JSON.stringify({

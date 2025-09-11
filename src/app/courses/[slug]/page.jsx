@@ -70,7 +70,7 @@ export default function CourseDetailPage() {
     }`,
   };
   const handlePay = () => {
-    console.log("hanldle pay");
+    
     // Save payment data in a cookie (secure storage)
     setCookie(
       "paymentData",

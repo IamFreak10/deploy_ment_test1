@@ -9,7 +9,7 @@ import bcrypt from 'bcrypt'
 export const registerUser=async(payload)=>{
 
     const usersCollection = await dbConnect('users')
-console.log(payload);
+
 const existingUser = await usersCollection.findOne({ email: payload.email });
 if (!existingUser) {
     const hashedPasss= await bcrypt.hash(payload.password,10)

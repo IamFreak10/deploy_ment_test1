@@ -8,7 +8,7 @@ import Logo from "./Logo";
 export default function Navbar() {
   const pathname = usePathname();
   const user = useAuth();
-  console.log(user);
+ 
   const userEmail = user?.email;
   const userProfileImage = user?.profileImage;
 

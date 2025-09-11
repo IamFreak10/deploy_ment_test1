@@ -123,7 +123,7 @@ export default function StripeWrapper() {
 
     // initPayment();
   }, []);
-  console.log(paymentData);
+
   return (
     <Elements stripe={stripePromise}>
       <CheckoutForm />

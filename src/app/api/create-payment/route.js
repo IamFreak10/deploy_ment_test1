@@ -17,7 +17,7 @@ export async function POST(request) {
       payment_method_types: ["card"],
       metadata: { name },
     });
-    console.log(paymentIntent, "new");
+   
     // save to mongoDb
     if (paymentIntent.id) {
       // insert the payment in db
@@ -30,7 +30,7 @@ export async function POST(request) {
         pay_at: new Date(),
         status: "success",
       });
-      console.log(insertPayment);
+      
     }
 
     return NextResponse.json({ clientSecret: paymentIntent.client_secret });

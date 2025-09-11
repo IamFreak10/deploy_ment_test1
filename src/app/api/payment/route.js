@@ -9,7 +9,7 @@ const store_passwd = "eduve68bca73b3804d@ssl"; // from sandbox
 
 export async function POST(req) {
   try {
-    console.log("Hit Korse Bhai");
+  
     const body = await req.json();
     const { amount, cus_name, cus_email, course_name } = body;
 
@@ -50,7 +50,7 @@ export async function POST(req) {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     });
-    console.log("Ini response", iniResponse);
+   
     const paymentsCollection = await dbConnect("payments");
 
     const res = await paymentsCollection.insertOne({
@@ -61,7 +61,7 @@ export async function POST(req) {
       tran_id,
       status: "pending",
     });
-    console.log(res);
+  
 
     const gateWayUrl = iniResponse?.data?.GatewayPageURL;
 

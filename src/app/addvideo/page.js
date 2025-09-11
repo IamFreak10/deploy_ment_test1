@@ -14,7 +14,7 @@ export default function AddVideo() {
   const fetchVideos = async () => {
     const res = await fetch("/api/video/get-videos");
     const data = await res.json();
-     console.log("Fetched videos:", data); // 👀 check structure
+    
     setVideos(data);
   };
 
